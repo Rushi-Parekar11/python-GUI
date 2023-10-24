@@ -1,0 +1,302 @@
+from tkinter import *
+from tkinter.ttk import *
+import tkinter.messagebox
+import tkinter.messagebox as tmsg
+import webbrowser
+from tkinter import ttk
+
+
+def Temple():
+    webbrowser.open("https://maps.app.goo.gl/Vq7KFviU3RQ15bd16")
+def allthecode():
+    head.withdraw()
+    root = Toplevel(head)
+    root.geometry("500x500")
+    root.minsize(600, 400)
+    root.maxsize(600, 400)
+    root.title("1.page  :LOGIN PAGE")
+    la = Label(root, text="LOGIN", font=('Verdana', 25))
+    la.grid(row=0, column=4)
+
+
+    def CRAETACCOUNT():
+        tmsg.askretrycancel("ERROR", "SORRY NEW ACCOUNT NOT VALID FOR YOU")
+
+
+    def SUBMIT():
+        mainroot1()
+        tmsg.showinfo("Hii new user", " Login Successful")
+
+
+    def yesno():
+        tmsg.askretrycancel("Log out", "Log Out Account")
+
+
+    ##lacation links fuction
+    def caves():
+        webbrowser.open("https://maps.app.goo.gl/B3We2QYKgD9LLkgd9")
+
+    def temple():
+        webbrowser.open("https://maps.app.goo.gl/Vq7KFviU3RQ15bd16")
+
+    def bibi():
+        webbrowser.open("https://maps.app.goo.gl/RamZ7jSNP4XbpNS47")
+
+    def garden():
+        webbrowser.open("https://maps.app.goo.gl/PztAuCquhPFgeTRs6")
+
+    def fort():
+        webbrowser.open("https://maps.app.goo.gl/Kyvsubket1sDGRZ78")
+
+    def FAMOUS():
+        fem = Tk()
+        fem.geometry("500x500")
+        fem.minsize(600, 500)
+        fem.maxsize(600, 500)
+        frame = Frame(fem)
+        frame.pack()
+
+        mainmenu = Menu(fem)
+
+        m1 = Menu(mainmenu, tearoff=0)
+        m1.add_command(label="👤  Rushi parekar")
+        m1.add_command(label="📧  rushikeshparekar@gmail.com")
+        m1.add_command(label="📞  7756808374")
+        m1.add_separator()
+        m1.add_command(label="🔒 : ******7080")
+        fem.config(menu=mainmenu)
+        mainmenu.add_cascade(label="       👤User      ", menu=m1)
+
+        m2 = Menu(mainmenu, tearoff=0)
+        m2.add_command(label="🛡️Data privacy")
+        m2.add_command(label="🔔 Notificatis")
+        m2.add_separator()
+        m2.add_command(label=" ↺  Reset Passward", command=yesno)
+        m2.add_command(label=" ←  Log Out")
+        fem.config(menu=mainmenu)
+        mainmenu.add_cascade(label="|   ⚙️Setting    ", menu=m2)
+
+        #button1
+        label1 = Label(frame, text="Ellora Caves", font=('Verdana', 13))
+        label1.pack()
+        button1 = Button(frame, text="🔍", command=caves)
+        button1.pack()
+
+        #button 2
+        label2=Label(frame, text="Grishneswar Jyotirlinga Temple", font=('Verdana', 13))
+        label2.pack()
+        button2=Button(frame, text="🔍", command=temple)
+        button2.pack()
+
+        #button2
+        label2=Label(frame, text="Bibi ka Maqbara", font=('Verdana', 13))
+        label2.pack()
+        button2=Button(frame, text="🔍", command=bibi)
+        button2.pack()
+
+        #button3
+        label3 = Label(frame, text="Siddharth Garden and Zoo", font=('Verdana', 13))
+        label3.pack()
+        button3 = Button(frame, text="🔍", command=garden)
+        button3.pack()
+
+        # button4
+        label4= Label(frame, text="Devgiri Fort", font=('Verdana', 13))
+        label4.pack()
+        button4= Button(frame, text="🔍", command=fort)
+        button4.pack()
+
+        el = Label(fem, text="LET'S EXPLORE CH.SAMBHAJINAGER ", font=('Verdana', 15))
+        el.pack()
+
+        fem.mainloop()
+
+    def dissension():
+        # remove all #
+        username=uname.get()
+        password=passw.get()
+        if (username=="rushi"or username =="atharva" or username == "mayuri") and password == "123":
+            tmsg.showinfo("Welcome","LOGIN successfully")
+            diss()
+        else:
+            tkinter.messagebox.showerror("Error", "Invalid username or password")
+
+    def dissension_creatAccount():
+        tmsg.showinfo("Hii new user", " Login Successful")
+
+    def diss():
+        root.withdraw()
+        des =Toplevel(root)
+        des.geometry("500x500")
+        des.minsize(300, 200)
+        des.maxsize(300, 200)
+        la =Label(des, text="SELECT", font=('Verdana', 15))
+        la.grid(row=0, column=4)
+
+        list_of_all=Button(des, text="Explore City", command=SUBMIT)
+        list_of_all.grid(row=2, column=3,)
+
+        famous=Button(des, text="FAMOUS spot", command=FAMOUS)
+        famous.grid(row=2, column=6)
+
+        des.mainloop()
+
+
+    def mainroot1():
+
+        window = Tk()
+        window.title("2.page  :Explor My city (Ch.Sambhajinagar)")
+        lbl = Label(window, text="🌐 Select Area", font=("Arial Bold", 10))
+        lbl.grid(column=0, row=1)
+        window.geometry('500x500')
+        window.minsize(600, 400)
+        window.maxsize(600, 400)
+
+        mainmenu = Menu(window)
+
+        m1 = Menu(mainmenu, tearoff=0)
+        m1.add_command(label="👤  Rushi parekar")
+        m1.add_command(label="📧  rushikeshparekar@gmail.com")
+        m1.add_command(label="📞  7756808374")
+        m1.add_separator()
+        m1.add_command(label="🔒 : ******7080")
+        window.config(menu=mainmenu)
+        mainmenu.add_cascade(label="       👤User      ", menu=m1)
+
+        m2 = Menu(mainmenu, tearoff=0)
+        m2.add_command(label="🛡️Data privacy")
+        m2.add_command(label="🔔 Notificatis")
+        m2.add_separator()
+        m2.add_command(label=" ↺  Reset Passward", command=yesno)
+        m2.add_command(label=" ←  Log Out")
+        window.config(menu=mainmenu)
+        mainmenu.add_cascade(label="|   ⚙️Setting    ", menu=m2)
+
+        cities_data = {
+            "Cidco": ["Hotel 1", "Hospital 1", "Public Trans. & Pvt Travels 1"],
+            "TV center": ["Hotel 2", "Hospital 2", "Public Trans. & Pvt Travels 2"],
+            "Beed BY.Pass": ["Hotel 3", "Hospital 3", "Public Trans. & Pvt Travels 3"],
+            "Pithan Gate": ["Hotel 4", "Hospital 4", "Public Trans. & Pvt Travels 4"],
+            "Chikhalthana": ["Hotel 5", "Hospital 5", "Public Trans. & Pvt Travels 5"],
+            "Usmanpura": ["Hotel 6", "Hospital 6", "Public Trans. & Pvt Travels 6"],
+            "Waluj": ["Hotel 7", "Hospital 7", "Public Trans. & Pvt Travels 7"]
+        }
+
+        #a dictionary
+        places_data = {
+            # cidco
+            "Hotel 1": ["ITC Rama international", "Hotel Green Leaf", "Lemon Tree", "Ambassador Ajanta",
+                        "Hotel Silver Inn",
+                        "Hotel Loksava"],
+            "Hospital 1": ["MGM Hospital", "Medicover Hospital", "Sankalp Hospital", "Apple Hospital",
+                           "Orchid Hospital",
+                           "Spandan Hospital"],
+            "Public Trans. & Pvt Travels 1": ["Cidco Bus Station", "Sai Travels (7756808374)",
+                                              "Hamsafar Travels (7756808374)", "Raj Travels (7756808374)",
+                                              "Om Travels (7756808374)"],
+
+            # Tv center
+            "Hotel 2": ["Vivanta Aurangabad", "7 Apple Hotel", "sai Rasto"],
+            "Hospital 2": ["ALMS hospital", "Rudra Truma center", "Smita's Infertility Center"],
+            "Public Trans. & Pvt Travels 2": ["Sai Travels","Hamsafar Travels", "Raj Travels","Om Travels"],
+            # Beed by pass
+            "Hotel 3": ["Hotel Unnati", "The Manor Hotel", "Hotel Gurjas","Hotel Dwarka Grand"],
+            "Hospital 3": ["ORIION CitiCare Super Specialty Hospital ", "Medicare Clinic", "Aurangabad Spine Clinic","United CIIGMA Hospital "],
+            "Public Trans. & Pvt Travels 3": [ "Sai Travels","Hamsafar Travels", "Raj Travels","Om Travels"],
+            # pithan gate
+            "Hotel 4": ["Zostel Aurangabad", "Hotel Black wood", "Grand 5 satar Hotel"],
+            "Hospital 4": ["Shree OPD",  "Medicare Clinic", "Aurangabad Spine Clinic",],
+            "Public Trans. & Pvt Travels 4": ["Sai Travels","Hamsafar Travels", "Raj Travels","Om Travels"],
+            # Chikhalthana
+            "Hotel 5": ["Sanni resto", "Junid hotel", "GYMkhana clud Hotel"],
+            "Hospital 5": ["District Hospital A.Bad ", "Sahyadri Multispeciality Hospital", "sai Nuro"],
+            "Public Trans. & Pvt Travels 5": ["Sai Travels","Hamsafar Travels", "Raj Travels","Om Travels"],
+            # Usmanpura
+            "Hotel 6": ["Hotel Black wood", "Grand 5 satar Hotel","Hotel Gurjas","Hotel Dwarka Grand"],
+            "Hospital 6": ["Rudra Truma center",  "Sankalp Hospital", "Apple Hospital"],
+            "Public Trans. & Pvt Travels 6": ["Sai Travels","Hamsafar Travels", "Raj Travels","Om Travels"],
+            # Waluj
+            "Hotel 7": ["Hotel Garva", "Hotel Grand Rasoi", "wood Family Resto"],
+            "Hospital 7": ["lifeline Hospital", "jay Critical care", "HTV hospital"],
+            "Public Trans. & Pvt Travels 7": ["Sai Travels","Hamsafar Travels", "Raj Travels","Om Travels"],
+
+        }
+
+        def update_city_combo(event):
+            selected_state = combo.get()
+            if selected_state != "Select":
+                city_combo['values'] = ["Select"] + cities_data[selected_state]
+                city_combo.current(0)
+                city_combo.grid(column=1, row=2)
+            else:
+                city_combo.set("Select")
+                city_combo.grid_remove()
+
+        def update_city_combo2(event):
+            selected_city = city_combo.get()
+            if selected_city != "Select":
+                city2_combo['values'] = ["Select"] + places_data.get(selected_city, [])
+                city2_combo.current(0)
+                city2_combo.grid(column=2, row=2)
+            else:
+                city2_combo.set("Select")
+                city2_combo.grid_remove()
+
+        combo = Combobox(window)
+        combo['values'] = (
+            "Select", "Cidco", "TV center", "Beed BY.Pass", "Pithan Gate", "Chikhalthana", "Usmanpura", "Waluj")
+        combo.current(0)
+        combo.grid(column=0, row=2)
+
+        combo.bind("<<ComboboxSelected>>", update_city_combo)
+
+        city_combo = Combobox(window)
+        city_combo['values'] = ("Select",)
+        city_combo.current(0)
+        city_combo.grid(column=1, row=2)
+
+        city_combo.bind("<<ComboboxSelected>>", update_city_combo2)
+
+        city2_combo = Combobox(window)
+        city2_combo['values'] = ("Select",)
+        city2_combo.current(0)
+        city2_combo.grid(column=2, row=2)
+
+        window.mainloop()
+
+    btn = Label(root, text="USERNAME  👤 ",font=('Verdana', 15) )
+    btn.grid(row=2, column=2)
+    uname = Entry(root, width=50)
+    uname.grid(row=2, column=4)
+
+    btn1 = Label(root, text="PASSWORD  🔒 ",font=('Verdana', 15) )
+    btn1.grid(row=3, column=2)
+    passw = Entry(root, width=50)
+    passw.grid(row=3, column=4)
+
+    un = StringVar()
+    pa = StringVar()
+
+    lab = Button(root, text="SUBMIT", command=dissension)
+    lab.grid(row=7, column=4, padx=60, pady=10)
+
+    labe = Button(root, text="Creat Account", command=CRAETACCOUNT,)
+    labe.grid(row=8, column=4, padx=60, pady=10)
+
+    labe1 = Label(root, text="Tip : ",font=('Verdana', 12) )
+    labe1.grid(row=10, column=4)
+    labe2 = Label(root, text="USENAME : rushi\nPASSWARD : 123")
+    labe2.grid(row=11, column=4)
+
+    root.mainloop()
+
+head = Tk()
+head.geometry("500x500")
+head.minsize(500, 400)
+head.maxsize(500, 400)
+butt=Button(text="Skip",command=allthecode).grid(row=4,column=5)
+law = Label(head, text="Welcome to ", font=('Verdana', 12))
+law.grid(row=0, column=4)
+law1 = Label(head, text="Explore My City... ", font=('Verdana', 25))
+law1.grid(row=2, column=4)
+head.mainloop()
